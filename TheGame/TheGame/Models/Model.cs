@@ -76,7 +76,23 @@ namespace TheGame.Models
         public string fk_ItemType { get; set; } // ID describing what type of clue it is pastic metal paper wood.
         public int puzzelPeace { get; set; } // if 0 then its a complated peace if 1 its a puzzel peace.
     }
-
+    public class GPSDegrees
+    {
+        public string Direction { get; set; }
+        public double course { get; set; }
+    }
+    public class GPSLock
+    {
+        public string Direction { get; set; } // N S E W
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+    }
+    public class User
+    {
+        public int ID { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+    }
     public class Task
     {
         public int ID { get; set; }

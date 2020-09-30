@@ -29,7 +29,7 @@ namespace TheGame.ViewModels
             });
         }
 
-        async Task ExecuteLoadItemsCommand()
+        async System.Threading.Tasks.Task ExecuteLoadItemsCommand()
         {
             IsBusy = true;
 
