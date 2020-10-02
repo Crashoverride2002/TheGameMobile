@@ -9,7 +9,10 @@ namespace TheGame.Services
     class GpsServiceClass
     {
         public GPSLock gps;
-
+        /// <summary>
+        /// Gets the coordinates based on maretime gps loc.
+        /// </summary>
+        /// <returns> GPSloc a public class of Model.</returns>
         public async System.Threading.Tasks.Task<GPSLock> getGPSCord()
         {
             try
@@ -63,7 +66,10 @@ namespace TheGame.Services
 
             return null;
         }
-
+        /// <summary>
+        /// / Gets the degrees and returns the navigation as well as the cource in degrees.
+        /// </summary>
+        /// <returns></returns>
         public async System.Threading.Tasks.Task<GPSDegrees> getCource()
         {
             try

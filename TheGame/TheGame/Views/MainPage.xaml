@@ -18,7 +18,17 @@
                 <views:ItemsPage />
             </x:Arguments>
         </NavigationPage>
-        
+        <NavigationPage Title="Clues">
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="tab_feed"/>
+                </OnPlatform>
+            </NavigationPage.Icon>
+            <!--<x:Arguments>
+                    <views:AboutPage />
+                </x:Arguments>
+            -->
+        </NavigationPage>
         <NavigationPage Title="Location">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
