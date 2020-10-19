@@ -1,4 +1,5 @@
 ﻿using System;
+using Xamarin.Forms;
 
 namespace TheGame.Models
 {
@@ -76,6 +77,15 @@ namespace TheGame.Models
         public string fk_ItemType { get; set; } // ID describing what type of clue it is pastic metal paper wood.
         public int puzzelPeace { get; set; } // if 0 then its a complated peace if 1 its a puzzel peace.
     }
+
+    public class ClueInventory
+    {
+        public int ID { get; set; }
+        public int QuestID { get; set;}
+        public int ItemCount { get; set; }
+        public Image image { get; set; }
+    }
+
     public class GPSDegrees
     {
         public string Direction { get; set; }

@@ -14,9 +14,9 @@
                     <On Platform="iOS" Value="tab_feed.png"/>
                 </OnPlatform>
             </NavigationPage.Icon>
-            <x:Arguments>
+            <!--<x:Arguments>
                 <views:ItemsPage />
-            </x:Arguments>
+            </x:Arguments>-->
         </NavigationPage>
         <NavigationPage Title="Clues">
             <NavigationPage.Icon>
