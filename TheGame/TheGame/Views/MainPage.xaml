@@ -30,6 +30,9 @@
             -->
         </NavigationPage>
         <NavigationPage Title="Location">
+            <x:Arguments>
+                <views:CluePage/>
+            </x:Arguments>
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS" Value="tab_about.png"/>
@@ -40,6 +43,9 @@
             </x:Arguments>-->
         </NavigationPage>
         <NavigationPage Title="Settings">
+            <x:Arguments>
+                <views:SettingsPage/>
+            </x:Arguments>
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS" Value="tab_about.png"/>
@@ -48,6 +54,17 @@
             <!--<x:Arguments>
                 <views:AboutPage />
             </x:Arguments>-->
+        </NavigationPage>
+        <NavigationPage Title="Items">
+            <x:Arguments>
+                <views:NewItemPage/>
+            </x:Arguments>
+            <NavigationPage.Icon>
+            <OnPlatform x:TypeArguments="FileImageSource">
+                <On Platform="iOS" Value="tab_about.png"/>
+            </OnPlatform>
+            </NavigationPage.Icon>
+            
         </NavigationPage>
     </TabbedPage.Children>
     

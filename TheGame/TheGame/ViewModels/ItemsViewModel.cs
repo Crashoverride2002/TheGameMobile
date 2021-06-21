@@ -24,6 +24,8 @@ namespace TheGame.ViewModels
             MessagingCenter.Subscribe<NewItemPage, Model>(this, "AddItem", async (obj, item) =>
             {
                 var newItem = item as Model;
+                newItem.button_id = "Button1";
+                newItem.button = true;
                 Items.Add(newItem);
                 await DataStore.AddItemAsync(newItem);
             });

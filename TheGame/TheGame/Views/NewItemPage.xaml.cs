@@ -23,7 +23,9 @@ namespace TheGame.Views
             {
                 Id = "0",
                 Text = "Item name",
-                Description = "This is an item description."
+                Description = "This is an item description.",
+                button_id = "0",
+                button = false
             };
 
             BindingContext = this;

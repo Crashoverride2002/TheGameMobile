@@ -8,6 +8,8 @@ namespace TheGame.Models
         public string Id { get; set; }
         public string Text { get; set; }
         public string Description { get; set; }
+        public bool button { get; set; }
+        public string button_id { get; set; }
     }
     public class Quest
     {

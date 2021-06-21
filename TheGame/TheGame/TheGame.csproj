@@ -23,5 +23,14 @@
     <Compile Update="Views\CluePage.xaml.cs">
       <DependentUpon>CluePage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\SEttingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\SettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
