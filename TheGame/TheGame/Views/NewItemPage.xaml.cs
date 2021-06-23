@@ -15,7 +15,7 @@ namespace TheGame.Views
     {
         public Model Item { get; set; }
 
-        public NewItemPage()
+        public NewItemPage()        
         {
             InitializeComponent();
 

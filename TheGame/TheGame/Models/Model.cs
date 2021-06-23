@@ -104,6 +104,12 @@ namespace TheGame.Models
         public int ID { get; set; }
         public string username { get; set; }
         public string password { get; set; }
+        public int GroupId { get; set; }
+    }
+    public class Groups
+    {
+        public int ID { get; set; }
+        public string GroupName { get; set; }
     }
     public class Task
     {
