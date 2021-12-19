@@ -40,6 +40,8 @@ namespace TheGame.Services
 
         public string title { get; set; }
 
+        public List<puzzle_peace> Peaces;
+
         public string description { get; set; }
 
         public string fileid { get; set; }
@@ -68,6 +70,7 @@ namespace TheGame.Services
         const string GetUser = "GetUser";
         const string GetGame = "GetGame";
         const string GetTask = "GetTask";
+        const string GetPuzzelCount = "GetPuzzelCount";
         const string Complete = "Complete";
         
         private HttpClient client;
@@ -83,6 +86,30 @@ namespace TheGame.Services
 #else
             client = new HttpClient();
 #endif
+        }
+        public async Task<int> getPuzzelCount(int Game_id)
+        {
+            int status = -1;
+            try
+            {
+                string url;
+                if (Game_id != 0)
+                    url = string.Format("{0}{1}", BaseUrl, GetPuzzelCount + "?game_id=" + Game_id);
+                else
+                    throw new ArgumentNullException(paramName: nameof(Game_id), message: "Game id can not be null. or Zero");
+                Uri uri = new Uri(url);
+                HttpResponseMessage responseMessage = await client.GetAsync(uri);
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    string content = await responseMessage.Content.ReadAsStringAsync();
+                    status = JsonConvert.DeserializeObject<int>(content);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.Write("Exception: " + e.Message);
+            }
+            return status;
         }
         public async Task<game> getGame(int Game_id, string gamename)
         {
