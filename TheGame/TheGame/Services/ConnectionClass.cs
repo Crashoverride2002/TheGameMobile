@@ -23,6 +23,7 @@ namespace TheGame.Services
         public string Notes { get; set; }
 
         public string guid { get; set; }
+        public string Email { get; set; }
     }
     public class puzzle_peace
     {
@@ -148,6 +149,14 @@ namespace TheGame.Services
                 {
                     string content = await response.Content.ReadAsStringAsync();
                     u = JsonConvert.DeserializeObject<user>(content);
+                }
+                else
+                {
+#if DEBUG
+                    Debug.Write("FAILED to login : " + response.RequestMessage.ToString());
+#else
+                    Debug.Write("Failed to connect try again later");
+#endif
                 }
 
             }
